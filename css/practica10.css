@@ -1,0 +1,180 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+       /* background-image: url(../img/restaurante1.jpg);
+        background-position-x: center;
+        background-position-y:center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;*/
+}
+
+.encabezado{
+    text-align: center;
+    margin : 20px 0px;
+}
+
+
+.slide {
+    margin-top: 0px;
+}
+
+.slide img{
+height: 85vh;
+width: 500vw;
+object-fit: cover;
+background-position: 60%;
+}
+
+
+.nav-link {
+    font-size: 25px;
+    margin-right: 45px;
+    font-weight: 400;
+}
+
+.titulo {
+    display: none;
+}
+
+.contenedor {
+    margin-top: 60px;
+    margin-left: 80px;
+}
+
+
+.postre img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 150px;
+    margin-left: 20px;
+    display:inline-block;
+    object-position: bottom;
+}
+
+
+.postre img:hover{
+    transform: scale(1.2);
+}
+
+
+.postre{
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: transform .2s;
+}
+
+#text {
+    display: block;
+    width: 350px;
+    height: 150px;
+    margin-top: 40px;
+}
+
+.postre h2 {
+    text-align: center;
+    margin-top: 46px;
+}
+
+
+.quesos{
+    display: inline-block;
+    transition: transform 2s;
+}
+
+
+.quesos img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 150px;
+    margin-left: 20px;
+}
+
+.quesos img:hover {
+    transform: scale(1.2);
+    
+
+}
+
+.quesos #text {
+    margin-right: 30px;
+}
+
+.quesos h2 {
+    text-align: center;
+    margin-top: 46px;
+}
+
+.pasta{
+    display: inline-block;
+    transition: transform 2s;
+}
+
+.pasta img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 150px;
+    margin-left: 20px;
+}
+
+.pasta img:hover{
+    transform: scale(1.2);
+}
+
+.pasta h2 {
+    text-align: center;
+    margin-top: 46px;
+}
+
+@media only screen and(min-width=800px){
+  .nav_desktop {
+      display: flex;
+      width: 20px;
+      margin: auto;
+      background-color: #000;
+  }
+    
+}
+
+
+.navbar-brand {
+  width: 20%;
+  margin-left: 5px;
+}
+.navbar-brand img {
+    width: 30%;
+    margin-left: 200px;
+}
+
+a  #login:hover {
+  color: red;
+}
+
+#dialog {
+    display: none;
+}
+
+.me-4 {
+    text-decoration: none;
+}
+
+#logo{
+    width: 100px;
+    height: 50px;
+  }
+  .nav-link {
+    font-size: 25px;
+    margin-right: 45px;
+    font-weight: 400;
+    margin-left: 5px;
+} 
+
+
+.collapse navbar-collapse justify-content-center {
+    margin-left: 95px;
+}
+

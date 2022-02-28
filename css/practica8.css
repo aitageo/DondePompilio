@@ -1,0 +1,218 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.encabezado h1 {
+    text-align: center;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+    background-color:#3A3A3A;
+    margin-top: 0;
+    color: #fff;
+    margin-bottom: 0%;
+    padding: 8px;
+    width: 100%;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+
+ .nav_desktop{
+    background-color: #26da;
+    margin-top: 0;
+    padding: 4px;
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    opacity: .9;
+}
+
+
+.nav_desktop a:hover{
+    color: #fff;
+}
+
+
+.nav_responsive ul {
+    display: none;
+}
+
+.nav_desktop ul {
+    list-style: none;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+
+}
+
+.nav_desktop ul li {
+    display: inline-block;
+    padding: 7px;
+    margin-left: 40px;
+    font-size: 22px;
+    text-transform: capitalize;
+
+}
+
+nav ul a {
+    text-decoration: none;
+    margin-left: 9px;
+    color: aqua;
+}
+
+
+.responsive_button {
+    float: right;
+    font-size: 25px;
+    padding: 6px 20px;
+
+}
+
+
+
+@media only screen and (max-width:500px) {
+   .nav_desktop ul {
+      display: none;
+  }
+  nav .nav_desktop {
+      display: none;
+  }
+
+  .encabezado h1 {
+      display: none;   
+  }
+
+  .nav_responsive ul {
+    display: block;
+    position: absolute;
+}
+ 
+.nav_responsive ul a:hover {
+   color: #000;
+}
+}
+
+
+
+.content {
+    display: flex;
+    width: 1900px;
+    height: 560px;
+}
+
+.content img {
+    width: 99vw;
+    height: 79vh;
+    object-fit: cover;
+;
+}
+
+#slider  {
+    display:flex;
+    margin-left: -200%;
+}
+
+.menu {
+    margin: auto;
+    margin-left: 50px;
+    padding: auto;
+}
+
+
+ 
+
+.postre img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 150px;
+    margin-left: 20px;
+    display:inline-block;
+    object-position: bottom;
+}
+
+
+.postre img:hover{
+    transform: scale(1.2);
+}
+
+
+.postre{
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: transform .2s;
+}
+
+#text {
+    display: block;
+    width: 350px;
+    height: 150px;
+}
+
+.postre h2 {
+    text-align: center;
+}
+
+
+.quesos{
+    display: inline-block;
+    transition: transform 2s;
+}
+
+
+.quesos img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 150px;
+    margin-left: 20px;
+}
+
+.quesos img:hover {
+    transform: scale(1.2);
+    
+
+}
+
+.quesos #text {
+    margin-right: 30px;
+}
+
+.quesos h2 {
+    text-align: center;
+}
+
+.pasta{
+    display: inline-block;
+    transition: transform 2s;
+}
+
+.pasta img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 150px;
+    margin-left: 20px;
+}
+
+.pasta img:hover{
+    transform: scale(1.2);
+}
+
+.pasta h2 {
+    text-align: center;
+}
+
+
+#logo{
+    width: 150px;
+    height: 50px;
+  }
