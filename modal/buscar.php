@@ -71,7 +71,7 @@ $registro = $conexion->query("SELECT *FROM empleados WHERE numero_cedula='$enter
 <div class='encabezado'>
   <h3>Resultados de la busqueda</h3>
 </div>
-<div class="contenedor">
+<div class="contenedor-buscar">
         <form action="" method="post">
 
           <label for="">Numero De cedula<input type="text" id="numero_cedula" name="numero_cedula" value="<?php echo  $key->numero_cedula?>"></label>
