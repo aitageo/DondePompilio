@@ -1,6 +1,9 @@
 <?php 
-if(isset($_POST['actulizar'])){
-    echo "hola";
+
+
+include("db.php");
+
+if(isset($_POST['actualizar'])){
     $numero_cedula = $_POST['numero_cedula'];
     $entero = intval($numero_cedula);
     $nombre = $_POST['nombre'];
@@ -13,9 +16,11 @@ if(isset($_POST['actulizar'])){
     echo "saludo";
 
     
-    $query = "UPDATE `empleados` SET `numero_cedula`='$entero',`nombre`='$nombre',`password`='$password',`apellido`='$apellido',`telefono`='$telefono',`direccion`='$direccion',`FK_id_cargo`='$id_cargo' WHERE numero_cedula='$entero'";
+    $query = "UPDATE empleados SET numero_cedula='$entero',nombre='$nombre',password='$password',apellido='$apellido',telefono='$telefono',direccion='$direccion',FK_id_cargo='$id_cargo' WHERE numero_cedula='$entero'";
     $result = $conexion->prepare($query);
     $result->execute();
+    echo "<script>alert('Datos actualizados')";
+    header('location:../usuarios.php');
 
 
 }
