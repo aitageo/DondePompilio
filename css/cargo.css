@@ -1,0 +1,156 @@
+body {
+   
+    padding: auto;
+    background-image: url("../E_PHP/images/img1.jpeg");
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 1364px;
+}
+
+
+h1{
+  display: flex;
+  justify-content: space-evenly;
+  color: antiquewhite;
+}
+
+.contain form {
+   margin: auto;
+  
+   
+}
+
+/*.menu{
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+    list-style:none;
+ 
+
+}
+.ul{
+  font: 100%;
+  display: block;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-position: 10%;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+ 
+}
+
+a{
+  margin: auto;
+  background: #5c5b5b;
+  display: block;
+}
+*/
+
+input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background:rgb(97, 99, 99);
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+    
+  }
+
+  input::placeholder {
+    color:#ccc;
+    transition:color 0.3s;
+  }
+  
+  input:hover {
+    background: rgb(151, 176, 201);
+  }
+  
+  input:hover::placeholder{
+    color: #fff;
+  }
+  
+  input:focus{
+    color:#ccc;
+  }
+  
+  input[type="submit"]{
+   width: 40%;
+   padding: 10px;
+   background: rgb(80, 82, 196);
+   color: #fff;
+   margin-top: 18px;
+  }
+  
+  input[type="submit"]:hover{
+    background: #eef3faaa;
+  
+  }
+
+
+  input[type="password"]:placeholder{
+    background: #ccc;
+  
+  }
+
+
+  form {
+    width: 30%;
+    margin: auto;
+    background:#444;
+    padding: 50px;
+    padding-top: 40px;
+    margin-top: 10px;
+  }
+
+  .btn-group {
+    font-family: "Roboto", sans-serif;
+    text-transform: capitalize;
+    outline: 0;
+    width: 100%;
+    border-radius: 10%;
+    margin-inline-start: -15px;
+    padding: 25px 9px;
+    color: #FFFFFF;
+    font-size: 14px
+  }
+  #logo{
+    width: 150px;
+    height: 50px;
+    
+  }
+  /*estilos barra navegacion*/
+  .nav {
+    padding-top: 10px;
+    display: flex;
+    background-color: #444;
+    justify-content: space-evenly;
+    text-transform: capitalize;
+  }
+
+  .nav ul{
+    text-decoration: none;
+    list-style:none;
+    padding: 5px;
+  }
+
+  .nav li {
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 20px;
+    justify-content: center;
+  }
+
+  .nav a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+  }
+    
