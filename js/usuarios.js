@@ -3,11 +3,11 @@
 let eliminar = document.getElementById("eliminar");
 
 eliminar.addEventListener("click",(event)=>{
-     alert("Realmente quieres eliminar este usuario");
-     if (condition) {
-          
+    let result = prompt("Realmente quieres eliminar este usuario");
+     if (result = true) {
+          return true;
      } else {
-          
+          return false;
      }
    
 
