@@ -69,8 +69,14 @@
 
 <?php 
 
+<<<<<<< HEAD
 include("db.php");
 echo "<h1>hola</h1>";
+=======
+
+include("db.php");
+
+>>>>>>> pruebas
 if(isset($_POST['actualizar'])){
     $numero_cedula = $_POST['numero_cedula'];
     $entero = intval($numero_cedula);
