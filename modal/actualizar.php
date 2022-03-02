@@ -69,8 +69,14 @@
 
 <?php 
 
+<<<<<<< HEAD
 include("db.php");
 echo "<h1>hola</h1>";
+=======
+
+include("db.php");
+
+>>>>>>> pruebas
 if(isset($_POST['actualizar'])){
     $numero_cedula = $_POST['numero_cedula'];
     $entero = intval($numero_cedula);
@@ -85,6 +91,8 @@ if(isset($_POST['actualizar'])){
     $query = "UPDATE empleados SET numero_cedula='$entero',nombre='$nombre',password='$password',apellido='$apellido',telefono='$telefono',direccion='$direccion',FK_id_cargo='$id_cargo' WHERE numero_cedula='$entero'";
     $result = $conexion->prepare($query);
     $result->execute();
+    echo "<script>alert('Datos actualizados')";
+    header('location:../usuarios.php');
 
 
 }
