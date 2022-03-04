@@ -49,7 +49,7 @@
                 <a class="nav-link" href="login.html" id="login">Mesas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login.html" id="login">Pedido</a>
+                <a class="nav-link" href="pedidos.html" id="login">Pedido</a>
               </li>
           </ul>
         </div>
