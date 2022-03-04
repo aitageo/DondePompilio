@@ -1,11 +1,11 @@
 body {
-   
-    padding: auto;
-    background-image: url("../E_PHP/images/img1.jpeg");
+  background-image: url(../img/restaurante1.jpg);
     background-position-x: center;
+    background-position-y:center;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-size: 1364px;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
 }
 
 
