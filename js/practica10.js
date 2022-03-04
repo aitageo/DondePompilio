@@ -7,19 +7,26 @@ $('.nav-link').mouseout(function () {
     $(this).css("color","#fff");
 });
 
-/*
-$("#login").click(function (e) { 
-    e.preventDefault();
-    alert("logueate en nuestra web")
-    
+
+$(".movido").wheel(function (){ 
+    var e = document.querySelector(".movido");
+    console.log(e);
+    e.addEventListener("animationstart",start,false);
+    e.addEventListener("animationend",end,false);
+    e.addEventListener("animationiteration",update,false); 
+
+
+    function start() {
+        e.classList('.movido');
+    }
+
+    function update(){
+        e.css("@keyframes","slidein");
+    }
+
+    function end(params) {
+         e.css("@keyframes","slidein");
+        
+    }
 });
-*}/
 
-
-
-/* no funciona  
-$("#dialog").mouseover(function () { 
-    $("#dialog").dialog();
-    console.error("error");
-});
-*/

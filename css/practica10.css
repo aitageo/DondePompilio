@@ -178,3 +178,29 @@ a  #login:hover {
     margin-left: 95px;
 }
 
+.movido{
+    margin-left: 0px;
+    padding: 20px;
+    color: #42210d;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 120px;
+    animation-duration: 1s;
+    animation-name: slidein;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;    
+}
+
+@keyframes slidein {
+    from {
+        margin-left : 28%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+
