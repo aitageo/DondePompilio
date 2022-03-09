@@ -7,7 +7,7 @@ $('.nav-link').mouseout(function () {
     $(this).css("color","#fff");
 });
 
-
+/* animacion */
 let movido = document.getElementById("movido");
 
 const cargarSlider =(entrys,observer)=>{

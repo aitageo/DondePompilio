@@ -22,7 +22,7 @@
 </head>
 <body>
     <!--barra de navegacion-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
         <a class="navbar-brand" href="./index.html"><img src="img/dondePompilio.png" alt="" srcset="" id="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -46,10 +46,10 @@
                 <a class="nav-link" href="login.html" id="login">Factura</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="menu.html" id="login">Menu</a>
+                <a class="nav-link" href="menu.html" id="menu">Menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="pedidos.html" id="login">Pedido</a>
+                <a class="nav-link" href="pedidos.html" id="pedidos">Pedido</a>
               </li>
           </ul>
         </div>
@@ -57,7 +57,7 @@
     </div>
   
     <div class="contenedor">
-        <h1>Menu</h1>
+        <h1>Empleados</h1>
         <form action="" method="post">
             <input type="text" id="numero_cedula" name="numero_cedula" placeholder="Numero de cedula"  required maxlength="15" minlength="7">
             <input type="text" id="nombre" name="nombre" placeholder="Nombre">
