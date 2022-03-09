@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pedidos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Pedido</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <img src="img/dondePompilio.png" alt="Logo Pompilio" id="logo"> <a href="index.html"></a>
+                    <li><a href="usuarios.php">Empleados</a></li>
+                    <li><a href="cargo.html">Cargo</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="pedidos.html">Pedido</a></li>
+                    <li><a href="#">Clientes</a></li>
+                    <li><a href="#">Domicilios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="contenedor">
+        <h1>Pedido</h1>
+        <form action="" method="post">
+
+            <div class="labelyfecha">
+                <div class="fecha">
+                    <label for="" id="fecha" name="fecha_pedido">Fecha pedido</label>
+                </div>
+
+                <div class="date">
+                    <input type="date" id="start" name="start" value="2021-01-01" min="1800-01-01" max="3000-12-31" required>
+                </div>
+            </div>
+
+            <div class="mesa">
+                <input type="number" id="pedido" name="pedido" placeholder="Pedido" required>
+                <input type="number" id="mesa" name="mesa" placeholder="Mesa" required>
+                <input type="text" id="mesero" name="mesero" placeholder="Mesero" required>
+            </div>
+
+            <label for="" style="padding-top:15px; padding-right: 30px;">Menu</label>
+            <div class="menu">
+                <label for="" style="padding-top:15px; padding-right: 30px;"></label>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+                <select class="form-control form-control-sm" id="select" name="select1[]">
+                    <option disabled selected>Selecciona una opción</option>
+                    <option value="1">Sancocho</option>
+                    <option value="2">Tilapia</option>
+                    <option value="3">Salmon</option>
+                    <option value="4">Sierra</option>
+                    <option value="5" >Corvina</option>
+                    <option value="5">Casuela de mariscos</option>
+                    <option value="6">Trucha</option>
+                    <option value="7">Robalo</option>
+                    <option value="8">Gaseosa</option>
+                    <option value="limonada">Limonada</option>
+                    <option value="claro">claro</option>
+                    <option value="mazamorra">Mazamorra</option>
+                </select>
+                <input type="number" name="cantidad1" placeholder="Cantidad" id="cantidad" min="1" max="100">
+            </div>
+
+            <div class="menu">
+                <label for="" style="padding-top:15px; padding-right: 30px;"></label>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+                <select class="form-control form-control-sm" id="select" name="select2" placeholder="Elige una opcion">
+                    <option disabled selected>Selecciona una opción</option>
+                    <option value="sancocho">Sancocho</option>
+                    <option value="tilapia">Tilapia</option>
+                    <option value="salmon">Salmon</option>
+                    <option value="sierra">Sierra</option>
+                    <option value="corvina" >Corvina</option>
+                    <option value="casuela_mariscos">Casuela de mariscos</option>
+                    <option value="trucha">Trucha</option>
+                    <option value="robalo">Robalo</option>
+                    <option value="gaseosa">Gaseosa</option>
+                    <option value="limonada">Limonada</option>
+                    <option value="claro">claro</option>
+                    <option value="mazamorra">Mazamorra</option>
+                </select>
+                <input type="number" name="cantidad2" placeholder="Cantidad" id="cantidad" min="1" max="100">
+            </div>
+
+            <div class="menu">
+                <label for="" style="padding-top:15px; padding-right: 30px;"></label>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+                <select class="form-control form-control-sm" id="select" name="select3">
+                    <option disabled selected>Selecciona una opción</option>
+                    <option value="sancocho">Sancocho</option>
+                    <option value="tilapia">Tilapia</option>
+                    <option value="salmon">Salmon</option>
+                    <option value="sierra">Sierra</option>
+                    <option value="corvina" >Corvina</option>
+                    <option value="casuela_mariscos">Casuela de mariscos</option>
+                    <option value="trucha">Trucha</option>
+                    <option value="robalo">Robalo</option>
+                    <option value="gaseosa">Gaseosa</option>
+                    <option value="limonada">Limonada</option>
+                    <option value="claro">claro</option>
+                    <option value="mazamorra">Mazamorra</option>
+                </select>
+                <input type="number" name="cantidad3" placeholder="Cantidad" id="cantidad" min="1" max="100">
+            </div>
+
+            <div class="menu">
+                <label for="" style="padding-top:15px; padding-right: 30px;"></label>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+                <select class="form-control form-control-sm" id="select" name="select4">
+                    <option disabled selected>Selecciona una opción</option>
+                    <option value="sancocho">Sancocho</option>
+                    <option value="tilapia">Tilapia</option>
+                    <option value="salmon">Salmon</option>
+                    <option value="sierra">Sierra</option>
+                    <option value="corvina" >Corvina</option>
+                    <option value="casuela_mariscos">Casuela de mariscos</option>
+                    <option value="trucha">Trucha</option>
+                    <option value="robalo">Robalo</option>
+                    <option value="gaseosa">Gaseosa</option>
+                    <option value="limonada">Limonada</option>
+                    <option value="claro">claro</option>
+                    <option value="mazamorra">Mazamorra</option>
+                </select>
+                <input type="number" name="cantidad4" placeholder="Cantidad" id="cantidad" min="1" max="100">
+            </div>
+
+            <div class="menu">
+                <label for="" style="padding-top:15px; padding-right: 30px;"></label>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+                <select class="form-control form-control-sm" id="select" name="select5">
+                    <option disabled selected>Selecciona una opción</option>
+                    <option value="sancocho">Sancocho</option>
+                    <option value="tilapia">Tilapia</option>
+                    <option value="salmon">Salmon</option>
+                    <option value="sierra">Sierra</option>
+                    <option value="corvina" >Corvina</option>
+                    <option value="casuela_mariscos">Casuela de mariscos</option>
+                    <option value="trucha">Trucha</option>
+                    <option value="robalo">Robalo</option>
+                    <option value="gaseosa">Gaseosa</option>
+                    <option value="limonada">Limonada</option>
+                    <option value="claro">claro</option>
+                    <option value="mazamorra">Mazamorra</option>
+                </select>
+                <input type="number" name="cantidad5" placeholder="Cantidad" id="cantidad" min="1" max="100">
+            </div>
+
+            <div class="menu">
+                <label for="" style="padding-top:15px; padding-right: 30px;"></label>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+                <select class="form-control form-control-sm" id="select" name="select6">
+                    <option disabled selected>Selecciona una opción</option>
+                    <option value="sancocho">Sancocho</option>
+                    <option value="tilapia">Tilapia</option>
+                    <option value="salmon">Salmon</option>
+                    <option value="sierra">Sierra</option>
+                    <option value="corvina" >Corvina</option>
+                    <option value="casuela_mariscos">Casuela de mariscos</option>
+                    <option value="trucha">Trucha</option>
+                    <option value="robalo">Robalo</option>
+                    <option value="gaseosa">Gaseosa</option>
+                    <option value="limonada">Limonada</option>
+                    <option value="claro">claro</option>
+                    <option value="mazamorra">Mazamorra</option>
+                </select>
+                <input type="number" name="cantidad6" placeholder="Cantidad" id="cantidad" min="1" max="100">
+            </div>
+
+
+
+            <div class="btn-group">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+                <button type="submit" class="btn btn-primary" name="nuevo" formaction="insertar.php" id="nuevo">Nuevo</button>
+                <button type="submit" class="btn btn-primary" name="actualizar" formaction="update.php">Actualizar</button>
+                <button type="submit" class="btn btn-primary" name="buscar" formaction="buscar.php">Buscar</button>
+                <button type="submit" class="btn btn-danger" name="eliminar" formaction="eliminar.php" id="eliminar">Eliminar</button>
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

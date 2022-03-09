@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Cargo</a>
+              <a class="nav-link" href="cargo.html">Cargo</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Clientes</a>
@@ -40,16 +40,16 @@
               <a class="nav-link"  href=#>Domicilios</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="login.html" id="login">Empleados</a>
+                <a class="nav-link" href="#" id="login">Empleados</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="login.html" id="login">Factura</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login.html" id="login">Mesas</a>
+                <a class="nav-link" href="menu.html" id="login">Menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login.html" id="login">Pedido</a>
+                <a class="nav-link" href="pedidos.html" id="login">Pedido</a>
               </li>
           </ul>
         </div>
@@ -57,7 +57,7 @@
     </div>
   
     <div class="contenedor">
-        <h1>Creacion de Empleados</h1>
+        <h1>Menu</h1>
         <form action="" method="post">
             <input type="text" id="numero_cedula" name="numero_cedula" placeholder="Numero de cedula"  required maxlength="15" minlength="7">
             <input type="text" id="nombre" name="nombre" placeholder="Nombre">

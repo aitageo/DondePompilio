@@ -3,7 +3,7 @@
 let eliminar = document.getElementById("eliminar");
 
 eliminar.addEventListener("click",(event)=>{
-    let result = prompt("Realmente quieres eliminar este usuario");
+    let result = alert("Realmente quieres eliminar este usuario");
      if (result = true) {
           return true;
      } else {
@@ -23,5 +23,6 @@ $("#nuevo").submit(function (e) {
      e.preventDefault();
      alert("datos ingresados");
      
+});
 });
 

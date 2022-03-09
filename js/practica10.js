@@ -7,19 +7,29 @@ $('.nav-link').mouseout(function () {
     $(this).css("color","#fff");
 });
 
-/*
-$("#login").click(function (e) { 
-    e.preventDefault();
-    alert("logueate en nuestra web")
-    
-});
-*}/
+
+let movido = document.getElementById("movido");
+
+const cargarSlider =(entrys,observer)=>{
+    //console.log(entrys);
+    //console.log(observer); 
+
+    entrys.forEach((entry) => {
+        if (entry.isIntersecting ){
+            entry.target.classList.add('visible'); 
+            console.log("En pantalla");  
+        }else {
+            entry.target.classList.remove('visible');
+        }
+    });
+
+}
+
+    let observable = new IntersectionObserver(cargarSlider,{
+       root:null,
+       rootMargin: '0px 0px 0px 0px',
+       threshold: 1.0   
+    });
 
 
-
-/* no funciona  
-$("#dialog").mouseover(function () { 
-    $("#dialog").dialog();
-    console.error("error");
-});
-*/
+    observable.observe(movido);
