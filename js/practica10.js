@@ -8,25 +8,28 @@ $('.nav-link').mouseout(function () {
 });
 
 
-$(".movido").wheel(function (){ 
-    var e = document.querySelector(".movido");
-    console.log(e);
-    e.addEventListener("animationstart",start,false);
-    e.addEventListener("animationend",end,false);
-    e.addEventListener("animationiteration",update,false); 
+let movido = document.getElementById("movido");
+
+const cargarSlider =(entrys,observer)=>{
+    //console.log(entrys);
+    //console.log(observer); 
+
+    entrys.forEach((entry) => {
+        if (entry.isIntersecting ){
+            entry.target.classList.add('visible'); 
+            console.log("En pantalla");  
+        }else {
+            entry.target.classList.remove('visible');
+        }
+    });
+
+}
+
+    let observable = new IntersectionObserver(cargarSlider,{
+       root:null,
+       rootMargin: '0px 0px 0px 0px',
+       threshold: 1.0   
+    });
 
 
-    function start() {
-        e.classList('.movido');
-    }
-
-    function update(){
-        e.css("@keyframes","slidein");
-    }
-
-    function end(params) {
-         e.css("@keyframes","slidein");
-        
-    }
-});
-
+    observable.observe(movido);

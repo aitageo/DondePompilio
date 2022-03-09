@@ -46,7 +46,7 @@
                 <a class="nav-link" href="login.html" id="login">Factura</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login.html" id="login">Mesas</a>
+                <a class="nav-link" href="menu.html" id="login">Menu</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="pedidos.html" id="login">Pedido</a>
@@ -57,7 +57,7 @@
     </div>
   
     <div class="contenedor">
-        <h1>Creacion de Empleados</h1>
+        <h1>Menu</h1>
         <form action="" method="post">
             <input type="text" id="numero_cedula" name="numero_cedula" placeholder="Numero de cedula"  required maxlength="15" minlength="7">
             <input type="text" id="nombre" name="nombre" placeholder="Nombre">

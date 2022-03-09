@@ -141,6 +141,11 @@ background-position: 60%;
 }
 
 
+.navbar-nav {
+    background-color: #000;
+}
+
+
 .navbar-brand {
   width: 20%;
   margin-left: 5px;
@@ -167,31 +172,31 @@ a  #login:hover {
     height: 50px;
   }
   .nav-link {
-    font-size: 25px;
+    font-size: 30px;
     margin-right: 45px;
     font-weight: 400;
     margin-left: 5px;
 } 
 
 
-.collapse navbar-collapse justify-content-center {
-    margin-left: 95px;
+
+
+.movido {
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
-.movido{
-    margin-left: 0px;
-    padding: 20px;
-    color: #42210d;
-    font-size: 40px;
-    text-transform: capitalize;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 120px;
-    animation-duration: 1s;
+.movido span{
+    transition: .9s ease-in-out all;
+    opacity: 0;
+    /*animation-duration: 1s;
     animation-name: slidein;
     animation-direction: reverse;
-    animation-fill-mode: forwards;    
+    animation-fill-mode: forwards;
+    */
 }
-
+/*
 @keyframes slidein {
     from {
         margin-left : 28%;
@@ -203,4 +208,23 @@ a  #login:hover {
     }
 }
 
+*/
+.movido span.derecha {
+    transform: translateX(150px);
+}
+
+
+
+.movido span.visible {
+    opacity: 1;
+    padding: 20px;
+    color: #42210d !important;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 120px;
+    margin-left: 320px;
+    transform: scale(0.9);
+   
+}
 
