@@ -7,6 +7,8 @@ body {
         background-size: cover;
         background-attachment: fixed;
         width: 100%;*/
+        background-color: #fcdaa7;
+        opacity: 1;
 }
 
 .encabezado{
@@ -24,6 +26,7 @@ height: 85vh;
 width: 500vw;
 object-fit: cover;
 background-position: 60%;
+overflow: hidden;
 }
 
 
@@ -170,6 +173,8 @@ a  #login:hover {
 #logo{
     width: 100px;
     height: 50px;
+    margin-right: 40px;
+    
   }
   .nav-link {
     font-size: 30px;
@@ -224,7 +229,10 @@ a  #login:hover {
     font-family: 'Raleway', sans-serif;
     font-weight: 120px;
     margin-left: 320px;
-    transform: scale(0.9);
+    /*transform: scale(0.9);*/
    
 }
 
+hr {
+    color: #000 !important;
+}

@@ -9,6 +9,7 @@ eliminar.addEventListener("click",(event)=>{
      } else {
           return false;
      }
+});
    
 
 $(".nav-link").mouseover(function () { 
@@ -19,10 +20,24 @@ $(".nav-link").mouseleave(function () {
      $(this).css("color","#fff"); 
     });
 
-$("#nuevo").submit(function (e) { 
-     e.preventDefault();
-     alert("datos ingresados");
+ 
+$("#nuevo").click(function () { 
+     let result = alert("Datos guardados");
+     if (result = true) {
+          return true
+     } else {
+          return false;
+     }
      
 });
+
+$("#actualizar").click(function (e) { 
+     let result = alert("Datos guardados");
+     if (result = true) {
+          return true
+     } else {
+          return false;
+     } 
+     
 });
 
