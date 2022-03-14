@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donde_ Pompilio</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+        crossorigin="anonymous">
+</head>
+<a href="index.html"><img src="img/dondePompilio.png" alt="" srcset="" id="logo-login"></a>
+<body>
+    <main>
+<div class="contenedor__todo">
+    <div class="caja_trasera">
+        <div class="caja_trasera_login">
+            <h3>Ya tienes una cuenta?</h3>
+            <p>Inicia sesion</p>
+            <button id="btn_iniciar-sesion">Iniciar Sesion</button>
+        </div>
+        <div class="caja_trasera_register">
+            <h3>No tienes una cuenta?</h3>
+            <p>Registrate</p>
+            <button id="btn_registrarse">Registrarse</button>
+        </div>
+    </div>
+
+    <div class="contenedor_login_register">
+        <form action="./modal/validar.php" method="post" class="formulario_login">
+            <h2>Iniciar sesion</h2>
+            <input type="email" name="email" id="email" placeholder="email">
+            <input type="password" placeholder="password" name="password" id="password">
+            <button type="submit" id="enviar" name="iniciar_sesion">Entrar</button>
+         </form>
+
+       <form action="./modal/registro.php" class="formulario_register" method="post">
+           <h2>Registrarse</h2>
+           <input type="text" placeholder="nombre" name="nombre" id="nombre">
+           <input type="email" name="email"  placeholder="email">
+           <input type="password" placeholder="password" name="password" >
+           <button type="submit" id="register" name="register">Registrarse</button>
+       </form>
+    </div>
+ </div>
+</main>
+    <script src="js/index.js"></script> 
+</body>
+</html>
