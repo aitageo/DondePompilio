@@ -3,22 +3,28 @@ include("db.php");
 include("registro.php");
 
 if(isset($_POST['iniciar_sesion'])){
-$email = $_POST['email'];
-$password = $_POST['password'];
+$email = htmlspecialchars($_POST['email']);
+$password = htmlspecialchars($_POST['password']);
 
 $cifrado = hash('sha512',$password);
 
 try {
-$query = "SELECT  email, password FROM registro where email='$email' and password='$cifrado'";
+$query = "SELECT * FROM registro where email='$email' and password='$password'";
 $result = $conexion->prepare($query);
 $result->execute();
-header('location:../usuarios.php');
 $filas=$result->rowCount();
-if($filas) {
+echo $filas;
+if($filas !=0) {
+  session_start();//inicio de sesion 
+  $_SESSION['usuario']= $_POST['email'];
   header("location:../usuarios.php");
+  echo "hola";
 
-}}catch(Exception $e){
-  echo "Ha ocurrido un error" .$e->getLine();
+}else {
+  header("location:../login.html");
+}
+}catch(Exception $e){
+  echo "Ha ocurrido un error: <br> linea  " .$e->getLine();
 
 }
 }

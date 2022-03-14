@@ -25,18 +25,18 @@
     <body>
         <!--barra de navegacion-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-            <a class="navbar-brand" href="./index.html"><img src="img/dondePompilio.png" alt="" srcset="" id="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
           
             <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
+              <ul class="navbar-nav">
+                  <a href="index.html"><img src="img/dondePompilio.png" alt="" srcset="" id="logo"></a>
                 <li class="nav-item active">
-                  <a class="nav-link" href="cargo.html">Cargo</a>
+                  <a class="nav-link" href="cargo.php">Cargo</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Clientes</a>
+                  <a class="nav-link" href="clientes.php">Clientes</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link"  href=#>Domicilios</a>
@@ -48,16 +48,22 @@
                     <a class="nav-link" href="login.html" id="login">Factura</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="menu.html" id="login">Menu</a>
+                    <a class="nav-link" href="menu.php" id="login">Menu</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pedidos.html" id="login">Pedido</a>
+                    <a class="nav-link" href="pedidos.php" id="login">Pedido</a>
                   </li>
               </ul>
             </div>
           </nav>
     </header>
-
+    <?php
+    session_start();
+    if (!isset($_SESSION['usuario'])) {
+       header('location:login.html');
+       echo "hola ". $_SESSION['usuario'];
+    }
+   ?>
     <div class="contenedor form-group">
         <h1>Pedido</h1>
         <form action="" method="post">
