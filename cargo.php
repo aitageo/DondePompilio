@@ -77,12 +77,12 @@
             <input type="password" name="password" id="password" placeholder="Contraseña">
             <div class="btn-group">
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-                <button type="submit" class="btn btn-primary" name="nuevo" formaction="insertar.php"
+                <button type="submit" class="btn btn-primary" name="nuevo" formaction="cargo/insertar.php"
                     id="nuevo">Nuevo</button>
-                <button type="submit" class="btn btn-primary" name="buscar" formaction="buscar.php">Buscar</button>
-                <button type="submit" class="btn btn-primary" name="actualizar"
+                <button type="submit" class="btn btn-primary" name="buscar" formaction="cargo/buscar.php">Buscar</button>
+                <button type="submit" class="btn btn-primary" name="cargo/actualizar"
                     formaction="actualizar.php">Actualizar</button>
-                <button type="submit" class="btn btn-danger" name="eliminar" formaction="delete.php">Eliminar</button>
+                <button type="submit" class="btn btn-danger" name="eliminar" formaction="cargo/delete.php">Eliminar</button>
             </div>
         </form>
     </div>

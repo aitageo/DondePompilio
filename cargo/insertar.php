@@ -16,6 +16,7 @@ $query = "INSERT INTO  cargo VALUES($id_cargo,'$nombre_cargo','$email','$cifrado
 
 $result = $conexion->prepare($query);
 $result->execute();
+header('location:../cargo.php');
 
 } catch(Exception $e){
 die("error".$e->getMessage());

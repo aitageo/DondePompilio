@@ -60,8 +60,6 @@
      session_start();
      if (!isset($_SESSION['usuario'])) {
         header('location:login.html');
-     }else {
-      echo  "<h3>hola ". $_SESSION['usuario']."</h3>";
      }
     ?>
   
