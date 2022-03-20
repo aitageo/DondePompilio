@@ -27,7 +27,7 @@ if (password_verify($password, $registro['password'])) {
 
 
 }else {
-  //header("location:../login.html");
+  header("location:../login.html");
 }
 
 
