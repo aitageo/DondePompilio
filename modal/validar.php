@@ -6,27 +6,38 @@ if(isset($_POST['iniciar_sesion'])){
 $email = htmlspecialchars($_POST['email']);
 $password = htmlspecialchars($_POST['password']);
 
-$cifrado = hash('sha512',$password);
 
 try {
-$query = "SELECT * FROM registro where email='$email' and password='$password'";
+$query = "SELECT * FROM registro where email='$email'";
 $result = $conexion->prepare($query);
 $result->execute();
-$filas=$result->rowCount();
-echo $filas;
-if($filas !=0) {
+
+$registro=$result->fetch(PDO::FETCH_ASSOC);
+echo $registro['password'] ."<br>";
+echo $registro['email'] ."<br>";
+echo $password;
+
+//esta funcion password_verify solo funciona con el algoritmo por defecto bcript de la funcion password_hash
+if (password_verify($password, $registro['password'])) {
+  echo "hola";
   session_start();//inicio de sesion 
   $_SESSION['usuario']= $_POST['email'];
   header("location:../usuarios.php");
-  echo "hola";
+  echo $registro['password'];
+
 
 }else {
-  header("location:../login.html");
+  //header("location:../login.html");
 }
+
+
 }catch(Exception $e){
   echo "Ha ocurrido un error: <br> linea  " .$e->getLine();
 
 }
 }
+
+
+
 
 ?>
