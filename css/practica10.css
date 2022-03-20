@@ -187,7 +187,7 @@ a  #login:hover {
 
 
 .movido {
-    margin-top: 60px;
+    margin-top: 50px;/*no cambiar si no no funciona el slider */
     margin-left: 20px;
     margin-bottom: 20px;
 }

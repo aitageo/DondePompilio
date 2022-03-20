@@ -1,5 +1,6 @@
 <?php
 
+
 include("db.php");
 
 if(isset($_POST['nuevo'])){
@@ -10,7 +11,7 @@ $entero = intval($numero_cedula);
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $password = $_POST['password'];
-$cifrado = hash('sha512',$password);
+$cifrado = password_hash($password,PASSWORD_DEFAULT);
 $telefono = $_POST['telefono'];
 $direccion = $_POST['direccion'];
 $id_cargo = $_POST['id_cargo'];
