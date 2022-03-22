@@ -3,8 +3,8 @@ include("db.php");
 include("registro.php");
 
 if(isset($_POST['iniciar_sesion'])){
-$email = htmlspecialchars($_POST['email']);
-$password = htmlspecialchars($_POST['password']);
+$email = htmlspecialchars(addslashes($_POST['email']));
+$password = htmlspecialchars(addslashes($_POST['password']));
 
 
 try {
@@ -19,7 +19,6 @@ echo $password;
 
 //esta funcion password_verify solo funciona con el algoritmo por defecto bcript de la funcion password_hash
 if (password_verify($password, $registro['password'])) {
-  echo "hola";
   session_start();//inicio de sesion 
   $_SESSION['usuario']= $_POST['email'];
   header("location:../usuarios.php");
