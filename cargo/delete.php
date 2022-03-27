@@ -1,24 +1,35 @@
 <?php
 
-include("conexion.php");
+include("db.php");
 
 if(isset($_POST['eliminar'])){
 
+$email = $_POST['email'];
+try {
 
-$id_cargo = $_POST['id_cargo'];
-$nombre_cargo= $_POST['nombre_cargo'];
-$email = $_POST['mail'];
-$password = $_POST['password'];
-$cifrado = hash('sha512',$password);
-
-
-$query = "DELETE FROM cargo where id_cargo= $id_cargo";
+$query = "DELETE FROM cargo WHERE email='$email'";
 $result = $conexion->prepare($query);
 $result->execute();
+if ($result->rowCount()> 0) {
+    echo "borrado exitoso";
+    header('location: ../cargo.php');
+} else {
 
-
-
+    echo "no se pudo borrar";
+    header('location: ../cargo.php');
 }
+
+}catch(Exception $e){
+    echo "borrado"; 
+   
+    }
+    finally {
+     $second_query = $conexion->query("UPDATE cargo SET activo=1 where email= '$email' ");
+     $second_query->execute();
+    
+    }
+}
+
 
 
 ?>

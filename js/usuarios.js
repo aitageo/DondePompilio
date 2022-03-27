@@ -1,17 +1,5 @@
 //por aitageo
-
-let eliminar = document.getElementById("eliminar");
-
-eliminar.addEventListener("click",(event)=>{
-    let result = alert("Realmente quieres eliminar este usuario");
-     if (result = true) {
-          return true;
-     } else {
-          return false;
-     }
-});
    
-
 $(".nav-link").mouseover(function () { 
  $(this).css("color","#26ca"); 
 });
@@ -31,13 +19,70 @@ $("#nuevo").click(function () {
      
 });
 
+
+
 $("#actualizar").click(function (e) { 
-     let result = alert("Datos guardados");
+     e.preventDefault();
+var nombre = getElementById("nombre");
+var nuevoNombre = getElementById("nuevo_nombre");
+stop;
+  if (nombre === "") {
+       alert("Debes ingresar un nombre");
+       return false;
+  }else if (nuevoNombre === "") {
+       alert("Debes ingresar el nuevo nombre");
+       return false;
+  } else {
+       return true;
+  }
+});
+
+
+$("#eliminar_usuario").click(function (e) { 
+     alert("Redireccionando");
+     
+});
+
+let numero_cedula = document.getElementById("numero_cedula");
+
+$("#eliminar").click(function (e) { 
+     if (numero_cedula.value === "") {
+          alert("Debes ingresar un numero de cedula");
+          return false;
+     } else {
+          alert("Eliminando");
+          return true;
+     }
+
+     /*let result = alert("Datos guardados");
      if (result = true) {
           return true
      } else {
           return false;
-     } 
-     
+     }
+     */
 });
+
+
+
+
+
+$("#buscar").click(function (e) { 
+     if (numero_cedula.value === "") {
+          alert("Debes ingresar un numero de cedula");
+          return false;
+     } else {
+          alert("Mostrando Resultados");
+          return true;
+     }
+
+     /*let result = alert("Datos guardados");
+     if (result = true) {
+          return true
+     } else {
+          return false;
+     }
+     */
+});
+
 

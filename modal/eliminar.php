@@ -19,6 +19,7 @@ if(isset($_POST['eliminar'])){
     $result->execute();
     if($result){
         header('location:../usuarios.php');
+        echo '<script>alert("Usuario borrado")</script>';
     }else {
         echo "No se pudo borrar";
     }

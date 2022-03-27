@@ -39,14 +39,9 @@
                   <a class="nav-link" href="clientes.php">Clientes</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link"  href=#>Domicilios</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="usuarios.php" id="login">Empleados</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="login.html" id="login">Factura</a>
-                  </li>
+                 
                   <li class="nav-item">
                     <a class="nav-link" href="menu.php" id="login">Menu</a>
                   </li>
@@ -215,10 +210,10 @@
 
             <div class="btn-group">
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-                <button type="submit" class="btn btn-primary" name="nuevo" formaction="insertar.php" id="nuevo">Nuevo</button>
-                <button type="submit" class="btn btn-primary" name="actualizar" formaction="update.php">Actualizar</button>
-                <button type="submit" class="btn btn-primary" name="buscar" formaction="buscar.php">Buscar</button>
-                <button type="submit" class="btn btn-danger" name="eliminar" formaction="eliminar.php" id="eliminar">Eliminar</button>
+                <button type="submit" class="btn btn-primary" name="nuevo" formaction="pedidos/insertar.php" id="nuevo">Nuevo</button>
+                <button type="submit" class="btn btn-primary" name="actualizar" formaction="pedidos/update.php">Actualizar</button>
+                <button type="submit" class="btn btn-primary" name="buscar" formaction="pedidos/buscar.php">Buscar</button>
+                <button type="submit" class="btn btn-danger" name="eliminar" formaction="´pedidos/eliminar.php" id="eliminar">Eliminar</button>
 
             </div>
         </form>

@@ -32,38 +32,30 @@
           <ul class="navbar-nav mr-auto">
           
             <li class="nav-item active">
-              <a class="nav-link" href="#">Cargo</a>
+              <a class="nav-link" href="../cargo.php">Cargo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Clientes</a>
+              <a class="nav-link" href="../clientes.php">Clientes</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../usuarios.php" id="login">Empleados</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login.html" id="login">Pedido</a>
+                <a class="nav-link" href="../pedidos.php" id="login">Pedido</a>
               </li>
           </ul>
         </div>
       </nav>
     </div>
-    <?php
-     session_start();
-     if (!isset($_SESSION['usuario'])) {
-        header('location:login.html');
-        echo "hola ". $_SESSION['usuario'];
-     }
-    ?>
 
 <?php
 include("db.php");
 if(isset($_POST['buscar'])){
-    $numero_cedula = $_POST['numero_cedula'];
-    $entero = intval($numero_cedula);
-$registro = $conexion->query("SELECT *FROM clientes WHERE numero_cedula='$entero'")->fetchAll(PDO::FETCH_OBJ); ?>
+    $email = $_POST['email'];
+$registro = $conexion->query("SELECT *FROM cargo WHERE email='$email'")->fetchAll(PDO::FETCH_OBJ); ?>
 <?php if(empty($registro)){
    echo "<h1>No se encontro nada</h1>";
-   header("location:../usuarios.php");
+   // header("location:../cargo.php");
 }
 ?>
 <?php foreach ($registro as $key): ?>
@@ -74,22 +66,16 @@ $registro = $conexion->query("SELECT *FROM clientes WHERE numero_cedula='$entero
   <table class="table table-sm table-dark">
   <thead>
     <tr>
-      <th scope="col">Numero de cedula</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Apellido</th>
-      <th scope="col">Direccion</th>
-      <th scope="col">Correo</th>
-      <th scope="col">Telefono</th> 
+      <th scope="col">Nombre Cargo</th>
+      <th scope="col">Email</th>
+      <th scope="col">Activo</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><?php echo  $key->numero_cedula?></td>
-      <td><?php echo  $key->nombre?></td>
-      <td><?php echo  $key->apellido?></td>
-      <td><?php echo  $key->direccion?></td>
-      <td><?php echo  $key->correo?></td>
-      <td><?php echo  $key->telefono?></td>
+      <td><?php echo  $key->nombre_cargo?></td>
+      <td><?php echo  $key->email?></td>
+      <td><?php echo  $key->activo?></td>
     </tr>
   </tbody>
 </table>
@@ -97,34 +83,12 @@ $registro = $conexion->query("SELECT *FROM clientes WHERE numero_cedula='$entero
   </div>
 
 
-<!--  
-<div class='encabezado'>
-  <h3>Resultados de la busqueda</h3>
-</div>
-<div class="contenedor-buscar">
-        <form action="" method="post">
-
-          <label for="">Numero De cedula<input type="text" id="numero_cedula" name="numero_cedula" value="<?php echo  $key->numero_cedula?>"></label>
-            <label for="">Nombre<input type="text" id="nombre" name="nombre" value="<?php echo  $key->nombre?>"></label>
-            <label for="">Apellido<input type="text" id="apellido"  name="apellido" value="<?php echo  $key->apellido?>"></label>
-            <label for="">password<input type="password" id="password"  name="password" value="<?php echo  $key->password?>"></label>
-            <label for="">Telefono<input type="text"  id="telefono" name="telefono" value="<?php echo  $key->telefono?>"></label>
-            <label for="">Direccion<input type="text"  id="direccion" name="direccion" value="<?php echo  $key->direccion?>"></label>
-            <label for=""> id Cargo<input type="number" id="cargo" name="id_cargo" id="cargo" value="<?php echo  $key->FK_id_cargo?>"></label>
-            <br>  
-        <button type="submit" class="btn btn-primary" name="actualizar" formaction="actualizar.php">Actualizar</button>  
-        </form>
-    </div>-->
 
 <?php endforeach; ?>
 
 <?php
 };
 ?>
- <div class="redireccion_buscar">
-    <input type="button" onclick="history.back()"  id="atras" value="Volver Atras">
-    <input type="button" onclick="window.location.href= '..cerrar_sesion.php'" onclick="alert('hola')" value="Cerrar sesion" id="sesion">
-    </div>
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
