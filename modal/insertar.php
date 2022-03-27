@@ -10,8 +10,7 @@ $numero_cedula = $_POST['numero_cedula'];
 $entero = intval($numero_cedula);
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
-$password = $_POST['password'];
-$cifrado = password_hash($password,PASSWORD_DEFAULT);
+$password = password_hash($_POST['password'],PASSWORD_DEFAULT);
 $telefono = $_POST['telefono'];
 $direccion = $_POST['direccion'];
 $id_cargo = $_POST['id_cargo'];
@@ -31,7 +30,7 @@ function validarUsuario ($numero_cedula){
 
 };
 
-$query = "INSERT INTO  empleados VALUES($entero,'$nombre','$cifrado','$apellido','$telefono','$direccion',$id_cargo)";
+$query = "INSERT INTO  empleados VALUES($entero,'$nombre','$password','$apellido','$telefono','$direccion',$id_cargo)";
 $result = $conexion->prepare($query);
 $result->execute();
 }

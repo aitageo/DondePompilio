@@ -211,3 +211,26 @@ input {
 .contenedor h1 {
   margin-top: 5px;
 }
+
+
+#sesion {
+  width: 20%;
+  margin: auto;
+  background-color: #26ca;
+  text-transform: capitalize;
+}
+
+#sesion:hover {
+  color: #ccc;
+}
+
+#eliminar {
+  width: 20%;
+  margin: auto;
+  background-color: #26ca;
+  text-transform: capitalize;
+}
+
+#eliminar:hover {
+  color: #ccc;
+}

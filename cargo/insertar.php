@@ -1,18 +1,15 @@
 <?php
 
-include("conexion.php");
+include("db.php");
 
 if(isset($_POST['nuevo'])){
 
-
-$id_cargo = $_POST['id_cargo'];
 $nombre_cargo= $_POST['nombre_cargo'];
-$email = $_POST['mail'];
-$password = $_POST['password'];
-$cifrado = hash('sha512',$password);
+$email = $_POST['email'];
+$password = password_hash($_POST['password'],PASSWORD_DEFAULT);
 
 try{
-$query = "INSERT INTO  cargo VALUES($id_cargo,'$nombre_cargo','$email','$cifrado')";
+$query = "INSERT INTO  cargo VALUES(id_cargo,'$nombre_cargo','$email','$password')";
 
 $result = $conexion->prepare($query);
 $result->execute();

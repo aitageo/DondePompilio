@@ -7,6 +7,8 @@ body {
         background-size: cover;
         background-attachment: fixed;
         width: 100%;
+        width: 100%;
+        margin: auto;
 }
 .encabezado{
     text-align: center;
@@ -54,14 +56,15 @@ a  #login:hover {
 #logo{
     width: 100px;
     height: 50px;
-  }
-
+    margin-right: 20px;
+}
 
   .contenedor-buscar {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 70px;
+    border: solid red;
   }
   
   
@@ -143,5 +146,66 @@ a  #login:hover {
 
     label {
         font-size: 20px;
+    
+    
+      }
+    .latabla {
+      width: 60%;
+      margin: auto;
+      margin-top: 80px;
     }
+
+    table {
+      width: 20%;
+      border: 1px solid #000;
+   }
+   th, td {
+      width: 25%;
+      text-align: left;
+      vertical-align: top;
+      border: 1px solid #000;
+      border-collapse: collapse;
+      padding: 0.3em;
+      caption-side: bottom;
+   }
+   caption {
+      padding: 0.3em;
+      color: #fff;
+       background: #000;
+   }
+   th {
+      background: #eee;
+      padding: 2px;
+   }
+  .redireccion_buscar {
+  margin-top: 220px;
+  position: relative;
+  display: flex;
+ }
+
+ #atras {
+  width: 20%;
+  margin: auto;
+  background-color: #26ca;
+  text-transform: capitalize;
+  border: solid 2px #fff;
+}
+
+#atras:hover {
+  color: #ccc;
+}
+
+#sesion {
+  width: 20%;
+  margin: auto;
+  background-color: #26ca;
+  text-transform: capitalize;
+  border: solid 2px #fff;
+  margin-top: 0px;
+}
+
+#sesion:hover {
+  color: #ccc;
+}
+ 
 

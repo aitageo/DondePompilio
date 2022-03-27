@@ -22,13 +22,15 @@
 <body>
     <!--barra de navegacion-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="../index.html"><img src="../img/dondePompilio.png" alt="" srcset="" id="logo"></a>
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <a class="navbar-brand" href="../index.html"><img src="../img/dondePompilio.png" alt="" srcset="" id="logo"></a>
           <ul class="navbar-nav mr-auto">
+          
             <li class="nav-item active">
               <a class="nav-link" href="#">Cargo</a>
             </li>
@@ -36,16 +38,7 @@
               <a class="nav-link" href="#">Clientes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"  href=#>Domicilios</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="../usuarios.php" id="login">Empleados</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html" id="login">Factura</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html" id="login">Mesas</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="login.html" id="login">Pedido</a>
@@ -67,7 +60,38 @@ $registro = $conexion->query("SELECT *FROM empleados WHERE numero_cedula='$enter
 }
 ?>
 <?php foreach ($registro as $key): ?>
+  <br>
+  <br>
+  <br>
+  <div class="latabla">
+  <table class="table table-sm table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Numero de cedula</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Telefono</th> 
+      <th scope="col">Direccion</th>
+      <th scope="col">Cargo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><?php echo  $key->numero_cedula?></td>
+      <td><?php echo  $key->nombre?></td>
+      <td><?php echo  $key->apellido?></td>
+     <!-- <td><?php echo  $key->password?></td>-->
+      <td><?php echo  $key->telefono?></td>
+      <td><?php echo  $key->direccion?></td>
+      <td><?php echo  $key->FK_id_cargo?></td>
+    </tr>
+  </tbody>
+</table>
 
+  </div>
+
+
+<!--  
 <div class='encabezado'>
   <h3>Resultados de la busqueda</h3>
 </div>
@@ -84,7 +108,8 @@ $registro = $conexion->query("SELECT *FROM empleados WHERE numero_cedula='$enter
             <br>  
         <button type="submit" class="btn btn-primary" name="actualizar" formaction="actualizar.php">Actualizar</button>  
         </form>
-    </div>
+    </div>-->
+
 <?php endforeach; ?>
 
 <?php
@@ -99,6 +124,6 @@ $registro = $conexion->query("SELECT *FROM empleados WHERE numero_cedula='$enter
     crossorigin="anonymous"></script> 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-<script src="../js/practica10.js"></script>
+<script src=""></script>
 </body>
 </html>

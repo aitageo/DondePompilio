@@ -12,7 +12,7 @@ if(isset($_POST['actualizar'])){
    $telefono = $_POST['telefono'];
    $direccion = $_POST['direccion'];
    
-    $query = "UPDATE clientes SET numero_cedula='$entero',nombre='$nombre',apellido='$apellido',telefono='$telefono',direccion='$direccion',correo='$email' WHERE numero_cedula='$entero'";
+    $query = "UPDATE clientes SET nombre='$nombre',apellido='$apellido',telefono='$telefono',direccion='$direccion',correo='$email' WHERE numero_cedula='$entero'";
     $result = $conexion->prepare($query);
     $result->execute();
     echo "<script>alert('Datos actualizados')";
@@ -20,4 +20,5 @@ if(isset($_POST['actualizar'])){
 
 
 }
+echo "<script>alert('Datos actualizados')";
 ?>|
