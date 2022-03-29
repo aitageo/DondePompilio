@@ -24,7 +24,6 @@
      session_start();
      if (!isset($_SESSION['usuario'])) {
         header('location:login.html');
-        echo "hola ". $_SESSION['usuario'];
      }
     ?>
 <body>

@@ -1,4 +1,6 @@
 
+
+//validacion de login 
 addEventListener("load",function(){
 
 let enviar = document.getElementById("enviar");
@@ -18,9 +20,20 @@ let password = document.getElementById("password").value;
 });
 });
 
-
+//
 $(document).ready(function () {
     console.log("cargado");
+});
+
+
+$.ajax({
+  type: "method",
+  url: "url",
+  data: "data",
+  dataType: "dataType",
+  success: function (response) {
+    
+  }
 });
 
 
@@ -28,6 +41,8 @@ document.querySelector("#btn_iniciar-sesion").addEventListener("click",iniciarSe
 document.getElementById("btn_registrarse").addEventListener("click",register);
 window.addEventListener("resize",anchoPagina);
 
+
+//obtener elementos por medio del dom con la clase
 var contenedor_login_register = document.querySelector(".contenedor_login_register")
 var formulario_login = document.querySelector(".formulario_login")
 var formulario_register = document.querySelector(".formulario_register")

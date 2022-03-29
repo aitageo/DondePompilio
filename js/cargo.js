@@ -7,7 +7,6 @@ let email = document.getElementById("email");
 eliminar.addEventListener("click",function(e){
   if (email.value ==="") {
       alert("Debes ingresar un correo");
-      e.preventDefault();
       stop;
       return false;
   } else {

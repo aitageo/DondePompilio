@@ -51,14 +51,17 @@
 <?php
 include("db.php");
 if(isset($_POST['buscar'])){
-    $numero_cedula = $_POST['numero_cedula'];
-    $entero = intval($numero_cedula);
-$registro = $conexion->query("SELECT *FROM empleados WHERE numero_cedula='$entero'")->fetchAll(PDO::FETCH_OBJ); ?>
-<?php if(empty($registro)){
-   echo "<h1>No se encontro nada</h1>";
-   header("location:../usuarios.php");
+    $numero_cedula = intval($_POST['numero_cedula']);
+$registro = $conexion->query("SELECT *FROM empleados WHERE numero_cedula='$numero_cedula'")->fetchAll(PDO::FETCH_OBJ); 
+
+if(empty($registro)){
+   $mensaje = "<script>alert('no se encontro nada')</script>";
+   header("location:../usuarios.php",$mensaje);
 }
 ?>
+
+
+
 <?php foreach ($registro as $key): ?>
   <br>
   <br>
@@ -80,7 +83,6 @@ $registro = $conexion->query("SELECT *FROM empleados WHERE numero_cedula='$enter
       <td><?php echo  $key->numero_cedula?></td>
       <td><?php echo  $key->nombre?></td>
       <td><?php echo  $key->apellido?></td>
-     <!-- <td><?php echo  $key->password?></td>-->
       <td><?php echo  $key->telefono?></td>
       <td><?php echo  $key->direccion?></td>
       <td><?php echo  $key->FK_id_cargo?></td>
@@ -90,27 +92,7 @@ $registro = $conexion->query("SELECT *FROM empleados WHERE numero_cedula='$enter
 
   </div>
 
-
-<!--  
-<div class='encabezado'>
-  <h3>Resultados de la busqueda</h3>
-</div>
-<div class="contenedor-buscar">
-        <form action="" method="post">
-
-          <label for="">Numero De cedula<input type="text" id="numero_cedula" name="numero_cedula" value="<?php echo  $key->numero_cedula?>"></label>
-            <label for="">Nombre<input type="text" id="nombre" name="nombre" value="<?php echo  $key->nombre?>"></label>
-            <label for="">Apellido<input type="text" id="apellido"  name="apellido" value="<?php echo  $key->apellido?>"></label>
-            <label for="">password<input type="password" id="password"  name="password" value="<?php echo  $key->password?>"></label>
-            <label for="">Telefono<input type="text"  id="telefono" name="telefono" value="<?php echo  $key->telefono?>"></label>
-            <label for="">Direccion<input type="text"  id="direccion" name="direccion" value="<?php echo  $key->direccion?>"></label>
-            <label for=""> id Cargo<input type="number" id="cargo" name="id_cargo" id="cargo" value="<?php echo  $key->FK_id_cargo?>"></label>
-            <br>  
-        <button type="submit" class="btn btn-primary" name="actualizar" formaction="actualizar.php">Actualizar</button>  
-        </form>
-    </div>-->
-
-<?php endforeach; ?>
+    <?php endforeach; ?>
 
 <?php
 };
