@@ -1,7 +1,5 @@
 <?php
 
-use function PHPSTORM_META\type;
-
 include("db.php");
 
 if(isset($_POST['nuevo'])) {
@@ -18,32 +16,31 @@ $data = array();
 
 
 function validarUsuario ($numero_cedula){
-    echo gettype($numero_cedula);
     include 'db.php';
-    global $nombre,$apellido,$password,$telefono,$direccion,$id_cargo;
+    global $nombre,$apellido,$password,$telefono,$direccion,$id_cargo,$data;
   $query = "SELECT * FROM empleados where numero_cedula = '$numero_cedula'";
-  echo $query;
   $result = $conexion->prepare($query);
   $result->execute();
   if ($result->rowCount() < 1) {
-    echo "hola";
     $query = "INSERT INTO  empleados VALUES('$numero_cedula','$nombre','$password','$apellido','$telefono','$direccion',$id_cargo)";
     $result = $conexion->prepare($query);
     $result->execute();
-    echo 'datos guardados';
-    $data = json_encode('datos guardados');
+    //echo 'datos guardados';
+    $data['exito'] = 'datos guardados';
+    //header('location:../usuarios.php');
   } 
   else {
-      $json_error = json_encode('El usuario ya existe');
-      header('location:../usuarios.php');
-      echo $json_error;
+      $data['error'] = 'El usuario ya existe jo';
+      //header('location:../usuarios.php');
+ 
   }
-  
+   echo json_encode($data);
 
 }
 validarUsuario($numero_cedula);
 
 }
 
-
 ?>
+
+

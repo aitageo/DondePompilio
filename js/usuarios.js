@@ -61,36 +61,54 @@ $("#eliminar").click(function (e) {
      }
 });
 
-/*
+
 $("#nuevo").click(function (e) { 
-    e.preventDefault();
-    console.log("hola aqui");
-$.ajax({
-     type: "POST",
-     url: "../modal/insertar.php",
-     data: {json_succes:json_succes},
-     dataType: "json",
-     success: function (data) {
-          if(data.status == 200){
-               var json = JSON.parse(data);
+     e.preventDefault();
+     $.ajax({
+          type: "POST",
+          url: "http://localhost:8282/DondePompilio1.0/modal/insertar.php", //entro aqui
+          data: "data",
+          dataType: "json",
+          success : function(json) {
                console.log(json);
-               console.log(data);
-               console.log("cargado");
+           },
+          error : function(xhr, status) {
+               alert('Disculpe, existió un problema');//entro aqui tambien
+           },
+
+     }).done(function(data) {
+          console.log("hola");
+          if (data.exito) {
+               alert("Datos guardados" + data.exito)
+               stop;
+          } else {
+               stop;
+               alert( "Error el usuario ya existe" + data.error);
           }
-     }
-});
+     })
+
+});//cierre del ready
+
+
+
+
+
+
+/*
+
+let nuevo = document.getElementById("nuevo");
+
+nuevo.addEventListener("click",function(e) {
+       e.preventDefault();
+     fetch('http://localhost:8282/DondePompilio1.0/modal/insertar.php')
+     .then(respuesta => respuesta.json())
+     .then(respuesta => console.log(respuesta))
+     
 });
 
 */
-$("#nuevo ").click(function (e) { 
-window.onload = function () {
- $.getJSON("../modal/insertar.php", exito);
-};
 
-function exito(data) {
-  alert(data.mensaje);
-}
-});
+
 
 $("#buscar").click(function (e) { 
      if (numero_cedula.value === "") {

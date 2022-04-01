@@ -6,10 +6,9 @@ if(isset($_POST['nuevo'])){
 
 $nombre_cargo= $_POST['nombre_cargo'];
 $email = $_POST['email'];
-$password = password_hash($_POST['password'],PASSWORD_DEFAULT);
 
 try{
-$query = "INSERT INTO  cargo VALUES(id_cargo,'$nombre_cargo','$email','$password')";
+$query = "INSERT INTO  cargo VALUES(id_cargo,'$nombre_cargo','$email',1)";
 
 $result = $conexion->prepare($query);
 $result->execute();
