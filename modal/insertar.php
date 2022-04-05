@@ -26,21 +26,31 @@ function validarUsuario ($numero_cedula){
     $result = $conexion->prepare($query);
     $result->execute();
     //echo 'datos guardados';
+    echo json_encode(array('success' => 1));
     $data['exito'] = 'datos guardados';
+    $json_succes = json_encode($data);
+   
     //header('location:../usuarios.php');
   } 
   else {
-      $data['error'] = 'El usuario ya existe jo';
+    echo json_encode(array('success' => 0));
+      $data['error'] = 'El usuario ya existe';
+      $json_error = json_encode($data);
+      echo "<input type='text' value='<?php echo  $json_error ?>'>";
       //header('location:../usuarios.php');
  
   }
-   echo json_encode($data);
-
+  return $json = json_encode($data);
+   
 }
 validarUsuario($numero_cedula);
 
 }
 
 ?>
+
+
+
+
 
 

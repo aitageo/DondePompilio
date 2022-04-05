@@ -19,6 +19,24 @@ $(".close").click(function (e) {
 
 
 
+$("#actualizar").click(function (e) {
+    alert("hola");
+  var  seleccion1 = document.getElementById("select1");
+  var  seleccion2 = document.getElementById("select2");
+   if (seleccion1.value === "") {
+       alert("Debes ingresar el pedido")
+       return false;
+   } else if(seleccion2.value === "") {
+    alert("Debes ingresar el pedido")
+    return false;
+   }else {
+    alert("Datos guardados");
+    stop;
+     return true;
+   }
+});
+
+
 
 
 

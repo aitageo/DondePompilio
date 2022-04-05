@@ -87,47 +87,47 @@
             <label for="" style="padding-top:10px; padding-right: 15px;">Menu</label>
             <div class="menu">
                 <label for="" style="padding-top:15px; padding-right: 30px;"></label>
-                <select class="form-control form-control-sm" id="select" name="select1">
+                <select class="form-control form-control-sm" id="select1" name="select1">
                     <option disabled selected>Selecciona una opción</option>
                     <option value="1">Sancocho</option>
                     <option value="2">Tilapia</option>
                     <option value="3">Salmon</option>
                     <option value="4">Sierra</option>
                     <option value="5">Corvina</option>
-                    <option value="5">Cazuela de mariscos</option>
-                    <option value="6">Trucha</option>
-                    <option value="7" name="Robalo">Robalo</option>
-                    <option value="8">Gaseosa</option>
-                    <option value="limonada">Limonada</option>
-                    <option value="claro">claro</option>
-                    <option value="mazamorra">Mazamorra</option>
+                    <option value="6">Cazuela de mariscos</option>
+                    <option value="7">Trucha</option>
+                    <option value="8" name="Robalo">Robalo</option>
+                    <option value="9">Gaseosa</option>
+                    <option value="10">Limonada</option>
+                    <option value="11">claro</option>
+                    <option value="12">Mazamorra</option>
                 </select>
                 <input type="number" name="cantidad1" placeholder="Cantidad" id="cantidad" min="1" max="100">
             </div>
 
             <div class="menu">
                 <label for="" style="padding-top:15px; padding-right: 30px;"></label>
-                <select class="form-control form-control-sm" id="select" name="select2" placeholder="Elige una opcion">
+                <select class="form-control form-control-sm" id="select2" name="select2" placeholder="Elige una opcion">
                     <option disabled selected>Selecciona una opción</option>
-                    <option value="sancocho">Sancocho</option>
-                    <option value="tilapia">Tilapia</option>
-                    <option value="salmon">Salmon</option>
-                    <option value="sierra">Sierra</option>
-                    <option value="corvina">Corvina</option>
-                    <option value="casuela_mariscos">Casuela de mariscos</option>
-                    <option value="trucha">Trucha</option>
-                    <option value="robalo">Robalo</option>
-                    <option value="gaseosa">Gaseosa</option>
-                    <option value="limonada">Limonada</option>
-                    <option value="claro">claro</option>
-                    <option value="mazamorra">Mazamorra</option>
+                    <option value="1">Sancocho</option>
+                    <option value="2">Tilapia</option>
+                    <option value="3">Salmon</option>
+                    <option value="4">Sierra</option>
+                    <option value="5">Corvina</option>
+                    <option value="6">Cazuela de mariscos</option>
+                    <option value="7">Trucha</option>
+                    <option value="8">Robalo</option>
+                    <option value="9">Gaseosa</option>
+                    <option value="10">Limonada</option>
+                    <option value="11">claro</option>
+                    <option value="12">Mazamorra</option>
                 </select>
                 <input type="number" name="cantidad2" placeholder="Cantidad" id="cantidad" min="1" max="100">
             </div>
             <div class="btn-group">
 
                 <button type="submit" class="btn btn-primary" name="nuevo" formaction="pedidos/insertar.php" id="nuevo">Nuevo</button>
-                <button type="submit" class="btn btn-primary" name="actualizar" formaction="pedidos/update.php">Actualizar</button>
+                <button type="submit" class="btn btn-primary" name="actualizar" id="actualizar" formaction="pedidos/update.php">Actualizar</button>
             </div>
         </form>
     </div>
